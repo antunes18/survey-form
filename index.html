@@ -18,7 +18,7 @@
       </p>
     </header>
     <main class="container is-fluid mt-4">
-      <form id="survey-form">
+      <form id="survey-form" method="POST">
         <div class="field">
           <label for="name" id="name-label" class="label">Name</label>
           <div class="control has-icons-left">
@@ -32,8 +32,8 @@
         
         <div class="field">
           <label for="email" id="email-label" class="label">Email</label>
-          <div class="control has-icons-left has-icons-right"">
-            <input type=" email" name="email" class="input is-rounded" id="email" placeholder="e.g thiago.antunes@gmail.com" required
+          <div class="control has-icons-left has-icons-right">
+            <input type=" email" name="email" class="input is-rounded" id="email" placeholder="e.g antunes@gmail.com" required
             autocomplete="off" />
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
@@ -44,7 +44,7 @@
         <div class="field">
           <label for="number" id="number-label" class="label">Age (optional)</label>
           <div class="control">
-            <input type="number" class="input is-rounded" id="number" min="1" max="122" placeholder="18" />
+            <input type="number" class="input is-rounded" id="number" min="1" max="122" />
           </div>
         </div>
 
@@ -56,7 +56,7 @@
                 <option disabled selected>Select current role</option>
                 <option value="student" id="dropdown">Student</option>
                 <option value="full-time-job">Full Time Job</option>
-                <option value="full-time-learner">Full Time Leraner</option>
+                <option value="full-time-learner">Full Time Learner</option>
                 <option value="prefer-no-say">Prefer not to say</option>
                 <option value="other">Other</option>
               </select>
@@ -86,9 +86,9 @@
         <div class="field">
           <p class="label">What is your favorite feature of freeCodeCamp?</p>
           <div class="select is-rounded">
-            <select name="role" id="dropdown" class="select">
+            <select class="select">
               <option selected disabled>Select an option</option>
-              <option value="challenges" id="dropdown">Challenges</option>
+              <option value="challenges">Challenges</option>
               <option value="projects">Projects</option>
               <option value="community">Community</option>
               <option value="open-source">Open source</option>
